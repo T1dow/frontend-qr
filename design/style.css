@@ -1,0 +1,136 @@
+/* From Uiverse.io by SachinKumar666 */ 
+body{
+    background:rgb(207, 227, 252);
+
+}
+
+.container{
+    display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100vh;           
+}
+.card {
+    /* White: hsl(0, 0%, 100%);
+
+    Slate 300: hsl(212, 45%, 89%)
+    Slate 500: hsl(216, 15%, 48%)
+    Slate 900: hsl(218, 44%, 22%) */
+  --card-bg:#fff;
+  --card-accent: #7c3aed;
+  --card-text: #1e293b;
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+
+  width: 250px;
+  height: 400px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+
+}
+
+
+
+
+.card__content {
+  padding: 0.7em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  z-index: 2;
+}
+
+/* .card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: white;
+  padding: 0.25em 0.5em;
+  border-radius: 999px;
+  font-size: 0.7em;
+  font-weight: 600;
+  opacity: 0;
+} */
+
+.card__image {
+  width: 100%;
+  
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 30%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(139, 92, 246, 0.1) 0px,
+      rgba(139, 92, 246, 0.1) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  opacity: 0.5;
+} */
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  text-align: center;
+}
+
+.card__title {
+  color: var(--card-text);
+  font-size: 1.1em;
+  margin: 0;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-family:  'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+.card__description {
+  color: var(--card-text);
+  font-size: 0.75em;
+  margin: 0;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  font-family:  'Outfit', sans-serif;
+  font-weight: 400;
+;
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row; /* Aligns items side-by-side on larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the layout on large displays */
+  }
+  .card__content{
+    
+  }
+}
+
